@@ -24,6 +24,20 @@ public class WaitUtils {
                         .visibilityOfElementLocated(locator));
     }
 
+    public static WebElement waitForClickable(
+            WebDriver driver,
+            By locator) {
+
+        WebDriverWait wait =
+                new WebDriverWait(
+                        driver,
+                        Duration.ofSeconds(20));
+
+        return wait.until(
+                ExpectedConditions
+                        .elementToBeClickable(locator));
+    }
+
     public static void waitForText(
             WebDriver driver,
             String text) {

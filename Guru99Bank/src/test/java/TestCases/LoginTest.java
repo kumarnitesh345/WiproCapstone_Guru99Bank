@@ -16,8 +16,9 @@ import Utilities.RetryAnalyzer;
 
 public class LoginTest extends BaseTest {
 
-    String excelPath =
-            "C:\\Users\\nk171\\OneDrive\\Desktop\\Guru99Data.xlsx";
+	String excelPath =
+			System.getProperty("user.dir")
+			+ "/src/test/resources/Guru99Data.xlsx";
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void validLoginTest() throws Exception {

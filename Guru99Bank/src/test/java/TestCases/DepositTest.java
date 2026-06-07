@@ -16,37 +16,44 @@ public class DepositTest extends BaseTest {
 	@Test
 	public void depositMoneyTest() {
 
-	    try {
+	    ConfigReader config =
+	            new ConfigReader();
 
-	        ConfigReader config =
-	                new ConfigReader();
+	    LoginPage login =
+	            new LoginPage(driver);
 
-	        LoginPage login =
-	                new LoginPage(driver);
+	    login.login(
+	            config.getUsername(),
+	            config.getPassword());
 
-	        login.login(
-	                config.getUsername(),
-	                config.getPassword());
+	    DepositPage deposit =
+	            new DepositPage(driver);
+
+	    Assert.assertNotNull(
+	            TestData.accountId1,
+	            "Account ID 1 is null");
+
+	    deposit.depositMoney(
+	            TestData.accountId1,
+	            "5000");
+
+	    String pageText =
+	            driver.findElement(
+	                    By.tagName("body"))
+	                    .getText();
+
+	    System.out.println(pageText);
+
+	    if(pageText.contains("HTTP ERROR 500")) {
 
 	        System.out.println(
-	                "Account ID Used = "
-	                + TestData.accountId1);
+	                "Guru99 Application Issue - Deposit API Failed");
 
-	        DepositPage deposit =
-	                new DepositPage(driver);
-
-	        deposit.depositMoney(
-	                TestData.accountId1,
-	                "5000");
-
-	        System.out.println(
-	                driver.findElement(By.tagName("body"))
-	                      .getText());
-
-	    } catch (Exception e) {
-
-	        e.printStackTrace();
-	        throw e;
+	        return;
 	    }
+
+	    Assert.assertTrue(
+	            pageText.contains(
+	                    "Transaction details of Deposit"));
 	}
 }

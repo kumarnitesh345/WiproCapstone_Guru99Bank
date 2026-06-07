@@ -1,0 +1,54 @@
+pipeline {
+
+```
+agent any
+
+tools {
+    maven 'Maven3'
+    jdk 'JDK 21'
+}
+
+stages {
+
+    stage('Checkout') {
+        steps {
+            git branch: 'master',
+            url: 'https://github.com/kumarnitesh345/WiproCapstone_Guru99Bank.git'
+        }
+    }
+
+    stage('Build & Execute Tests') {
+        steps {
+
+            dir('Guru99Bank') {
+
+                bat 'mvn clean test'
+            }
+        }
+    }
+}
+
+post {
+
+    always {
+
+        junit 'Guru99Bank/target/surefire-reports/*.xml'
+
+        archiveArtifacts artifacts: 'Guru99Bank/screenshots/*.png',
+                         allowEmptyArchive: true
+
+        archiveArtifacts artifacts: 'Guru99Bank/logs/*.log',
+                         allowEmptyArchive: true
+    }
+
+    success {
+        echo 'Build Successful'
+    }
+
+    failure {
+        echo 'Build Failed'
+    }
+}
+```
+
+}

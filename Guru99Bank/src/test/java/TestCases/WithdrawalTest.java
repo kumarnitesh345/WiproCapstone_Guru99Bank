@@ -1,5 +1,6 @@
 package TestCases;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,33 +13,37 @@ import Utilities.WaitUtils;
 
 public class WithdrawalTest extends BaseTest {
 
-    @Test
-    public void withdrawalMoneyTest() {
+	@Test
+	public void withdrawalMoneyTest() {
 
-        ConfigReader config =
-                new ConfigReader();
+	    ConfigReader config =
+	            new ConfigReader();
 
-        LoginPage login =
-                new LoginPage(driver);
+	    LoginPage login =
+	            new LoginPage(driver);
 
-        login.login(
-                config.getUsername(),
-                config.getPassword());
+	    login.login(
+	            config.getUsername(),
+	            config.getPassword());
 
-        WithdrawalPage withdrawal =
-                new WithdrawalPage(driver);
+	    WithdrawalPage withdrawal =
+	            new WithdrawalPage(driver);
 
-        withdrawal.withdrawMoney(
-                TestData.accountId1,
-                "1000");
-        
-        WaitUtils.waitForText(
-                driver,
-                "Transaction details of Withdrawal");
+	    Assert.assertNotNull(
+	            TestData.accountId1,
+	            "Account ID 1 is null");
 
-        Assert.assertTrue(
-                driver.getPageSource()
-                      .contains(
-                              "Transaction details of Withdrawal"));
-    }
+	    withdrawal.withdrawMoney(
+	            TestData.accountId1,
+	            "1000");
+
+	    WaitUtils.waitForText(
+	            driver,
+	            "Transaction details of Withdrawal");
+
+	    Assert.assertTrue(
+	            driver.getPageSource()
+	                  .contains(
+	                  "Transaction details of Withdrawal"));
+	}
 }

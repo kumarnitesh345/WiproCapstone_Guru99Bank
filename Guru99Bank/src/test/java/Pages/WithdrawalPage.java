@@ -1,6 +1,9 @@
 package Pages;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import Utilities.WaitUtils;
 
@@ -12,31 +15,31 @@ public class WithdrawalPage {
         this.driver = driver;
     }
 
-    By withdrawalLink =
-            By.linkText("Withdrawal");
-
-    By accountNo =
-            By.name("accountno");
-
-    By amount =
-            By.name("ammount");
-
-    By description =
-            By.name("desc");
-
-    By submit =
-            By.name("AccSubmit");
+    By withdrawalLink = By.linkText("Withdrawal");
+    By accountNo = By.name("accountno");
+    By amount = By.name("ammount");
+    By description = By.name("desc");
+    By submit = By.name("AccSubmit");
 
     public void withdrawMoney(
             String accNo,
             String amt) {
 
-    	WaitUtils.waitForElement(
-    	        driver,
-    	        withdrawalLink)
-    	        .click();
+        WebElement withdrawalMenu =
+                WaitUtils.waitForClickable(
+                        driver,
+                        withdrawalLink);
 
-        driver.findElement(accountNo)
+        JavascriptExecutor js =
+                (JavascriptExecutor) driver;
+
+        js.executeScript(
+                "arguments[0].click();",
+                withdrawalMenu);
+
+        WaitUtils.waitForElement(
+                driver,
+                accountNo)
                 .sendKeys(accNo);
 
         driver.findElement(amount)
@@ -45,7 +48,7 @@ public class WithdrawalPage {
         driver.findElement(description)
                 .sendKeys("Withdraw");
 
-        WaitUtils.waitForElement(
+        WaitUtils.waitForClickable(
                 driver,
                 submit)
                 .click();

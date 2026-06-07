@@ -10,8 +10,7 @@ import Utilities.ConfigReader;
 import Utilities.TestData;
 import Utilities.WaitUtils;
 
-public class FundTransferTest
-        extends BaseTest {
+public class FundTransferTest extends BaseTest {
 
     @Test
     public void fundTransferTest() {
@@ -26,15 +25,22 @@ public class FundTransferTest
                 config.getUsername(),
                 config.getPassword());
 
+        Assert.assertNotNull(
+                TestData.accountId1,
+                "Account ID 1 is null");
+
+        Assert.assertNotNull(
+                TestData.accountId2,
+                "Account ID 2 is null");
+
         System.out.println(
                 "From Account = "
-                + TestData.accountId1);
+                        + TestData.accountId1);
 
         System.out.println(
                 "To Account = "
-                + TestData.accountId2);
+                        + TestData.accountId2);
 
-        
         FundTransferPage transfer =
                 new FundTransferPage(driver);
 
@@ -42,15 +48,15 @@ public class FundTransferTest
                 TestData.accountId1,
                 TestData.accountId2,
                 "2500");
-        
+
         WaitUtils.waitForText(
                 driver,
                 "Fund Transfer Details");
 
         Assert.assertTrue(
                 driver.getPageSource()
-                      .contains(
-                              "Fund Transfer Details"));
-        
+                        .contains(
+                                "Fund Transfer Details"),
+                "Fund Transfer Failed");
     }
 }

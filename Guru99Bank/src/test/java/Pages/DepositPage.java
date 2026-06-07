@@ -1,7 +1,9 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import Utilities.WaitUtils;
 
@@ -13,31 +15,29 @@ public class DepositPage {
         this.driver = driver;
     }
 
-    By depositLink =
-            By.linkText("Deposit");
+    By depositLink = By.linkText("Deposit");
+    By accountNo = By.name("accountno");
+    By amount = By.name("ammount");
+    By description = By.name("desc");
+    By submit = By.name("AccSubmit");
 
-    By accountNo =
-            By.name("accountno");
+    public void depositMoney(String accNo, String amt) {
 
-    By amount =
-            By.name("ammount");
+        WebElement depositMenu =
+                WaitUtils.waitForClickable(
+                        driver,
+                        depositLink);
 
-    By description =
-            By.name("desc");
+        JavascriptExecutor js =
+                (JavascriptExecutor) driver;
 
-    By submit =
-            By.name("AccSubmit");
+        js.executeScript(
+                "arguments[0].click();",
+                depositMenu);
 
-    public void depositMoney(
-            String accNo,
-            String amt) {
-
-    	WaitUtils.waitForElement(
-    	        driver,
-    	        depositLink)
-    	        .click();
-
-        driver.findElement(accountNo)
+        WaitUtils.waitForElement(
+                driver,
+                accountNo)
                 .sendKeys(accNo);
 
         driver.findElement(amount)
@@ -46,7 +46,7 @@ public class DepositPage {
         driver.findElement(description)
                 .sendKeys("Deposit");
 
-        WaitUtils.waitForElement(
+        WaitUtils.waitForClickable(
                 driver,
                 submit)
                 .click();

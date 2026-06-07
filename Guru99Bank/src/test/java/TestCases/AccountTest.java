@@ -1,6 +1,5 @@
 package TestCases;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,20 +24,31 @@ public class AccountTest extends BaseTest {
                 config.getUsername(),
                 config.getPassword());
 
+        Assert.assertNotNull(
+                TestData.customerId,
+                "Customer ID is null");
+
         NewAccountPage account =
                 new NewAccountPage(driver);
 
         account.createAccount(
                 TestData.customerId);
-        driver.findElement(
-                By.linkText("New Account"))
-                .click();
 
         account.createAccount(
                 TestData.customerId);
-        
-        Assert.assertTrue(
-                driver.getPageSource()
-                      .contains("Account Generated Successfully"));
+
+        Assert.assertNotNull(
+                TestData.accountId1);
+
+        Assert.assertNotNull(
+                TestData.accountId2);
+
+        System.out.println(
+                "Account 1 = "
+                        + TestData.accountId1);
+
+        System.out.println(
+                "Account 2 = "
+                        + TestData.accountId2);
     }
 }
