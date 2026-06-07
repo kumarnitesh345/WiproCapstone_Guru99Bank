@@ -4,21 +4,37 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import Utilities.ScreenshotUtil;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import Base.BaseTest;
+import Utilities.ExtentManager;
+import Utilities.ScreenshotUtil;
 
 public class TestListener implements ITestListener {
 
+    ExtentReports extent =
+            ExtentManager.getInstance();
+
+    ExtentTest test;
+
     @Override
-    public void onTestStart(ITestResult result) {
+    public void onTestStart(
+            ITestResult result) {
+
+        test = extent.createTest(
+                result.getName());
 
         System.out.println(
                 "STARTED : "
-                        + result.getName()); 
+                        + result.getName());
     }
 
     @Override
-    public void onTestSuccess(ITestResult result) {
+    public void onTestSuccess(
+            ITestResult result) {
+
+        test.pass("Test Passed");
 
         System.out.println(
                 "PASSED : "
@@ -26,19 +42,26 @@ public class TestListener implements ITestListener {
     }
 
     @Override
-    public void onTestFailure(ITestResult result) {
+    public void onTestFailure(
+            ITestResult result) {
 
-        System.out.println(
-                "FAILED : "
-                        + result.getName());
+        test.fail(
+                result.getThrowable());
 
         ScreenshotUtil.captureScreenshot(
                 BaseTest.driver,
                 result.getName());
+
+        System.out.println(
+                "FAILED : "
+                        + result.getName());
     }
 
     @Override
-    public void onTestSkipped(ITestResult result) {
+    public void onTestSkipped(
+            ITestResult result) {
+
+        test.skip("Test Skipped");
 
         System.out.println(
                 "SKIPPED : "
@@ -46,14 +69,18 @@ public class TestListener implements ITestListener {
     }
 
     @Override
-    public void onStart(ITestContext context) {
+    public void onStart(
+            ITestContext context) {
 
         System.out.println(
                 "Execution Started");
     }
 
     @Override
-    public void onFinish(ITestContext context) {
+    public void onFinish(
+            ITestContext context) {
+
+        extent.flush();
 
         System.out.println(
                 "Execution Completed");

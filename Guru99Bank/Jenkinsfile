@@ -13,7 +13,7 @@ stages {
     stage('Checkout') {
         steps {
             git branch: 'master',
-            url: 'https://github.com/kumarnitesh345/WiproCapstone_Guru99Bank.git'
+                url: 'https://github.com/kumarnitesh345/WiproCapstone_Guru99Bank.git'
         }
     }
 
@@ -32,13 +32,19 @@ post {
 
     always {
 
-        junit 'Guru99Bank/target/surefire-reports/*.xml'
+        junit allowEmptyResults: true,
+              testResults: 'Guru99Bank/target/surefire-reports/*.xml'
 
         archiveArtifacts artifacts: 'Guru99Bank/screenshots/*.png',
                          allowEmptyArchive: true
 
         archiveArtifacts artifacts: 'Guru99Bank/logs/*.log',
                          allowEmptyArchive: true
+
+        archiveArtifacts artifacts: 'Guru99Bank/ExtentReports/*.html',
+                         allowEmptyArchive: true
+
+        echo 'Execution Completed'
     }
 
     success {
