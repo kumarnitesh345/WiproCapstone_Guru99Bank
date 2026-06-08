@@ -38,3 +38,4 @@ public class CustomerTest extends BaseTest {
                               "Customer Registered Successfully"));
     }
 }
+

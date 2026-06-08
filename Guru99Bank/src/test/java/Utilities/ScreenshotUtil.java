@@ -14,12 +14,20 @@ public class ScreenshotUtil {
             WebDriver driver,
             String fileName) {
 
-        File src =
-                ((TakesScreenshot) driver)
-                        .getScreenshotAs(
-                                OutputType.FILE);
-
         try {
+
+            if (driver == null) {
+
+                System.out.println(
+                        "Driver is null. Screenshot skipped.");
+
+                return;
+            }
+
+            File src =
+                    ((TakesScreenshot) driver)
+                            .getScreenshotAs(
+                                    OutputType.FILE);
 
             FileUtils.copyFile(
                     src,
@@ -31,6 +39,12 @@ public class ScreenshotUtil {
         } catch (IOException e) {
 
             e.printStackTrace();
+
+        } catch (Exception e) {
+
+            System.out.println(
+                    "Screenshot capture failed : "
+                            + e.getMessage());
         }
     }
 }

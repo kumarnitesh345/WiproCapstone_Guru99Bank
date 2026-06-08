@@ -48,7 +48,19 @@ public class FundTransferTest extends BaseTest {
                 TestData.accountId1,
                 TestData.accountId2,
                 "2500");
+        TestData.account1Balance =
+                TestData.account1Balance - 2500;
 
+        
+
+        System.out.println(
+                "Transfer Amount = 2500");
+
+        System.out.println(
+                "Sender Balance = "
+                        + TestData.account1Balance);
+
+        
         WaitUtils.waitForText(
                 driver,
                 "Fund Transfer Details");

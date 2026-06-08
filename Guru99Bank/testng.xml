@@ -14,24 +14,26 @@
 
         <classes>
 
-            <class name=
-            "TestCases.LoginTest"/>
+            <class name="TestCases.LoginTest"/>
 
-            <class name=
-            "TestCases.CustomerTest"/>
+            <!-- Customer Module -->
+            <class name="TestCases.CustomerTest"/>
+            <class name="TestCases.CustomerValidationTest"/>
 
-            <class name=
-            "TestCases.AccountTest"/>
+            <!-- Account Module -->
+            <class name="TestCases.AccountTest"/>
+            <class name="TestCases.AccountDetailsTest"/>
 
-            <class name=
-            "TestCases.DepositTest"/>
+            <!-- Transaction Module -->
+            <class name="TestCases.DepositTest"/>
+            <class name="TestCases.WithdrawalTest"/>
 
-            <class name=
-            "TestCases.WithdrawalTest"/>
+            <!-- Fund Transfer Module -->
+            <class name="TestCases.FundTransferTest"/>
 
-            <class name=
-            "TestCases.FundTransferTest"/>
-
+            <!-- Negative Test Scenarios -->
+            <class name="TestCases.InvalidAccountTest"/>
+            <class name="TestCases.InsufficientBalanceTest"/>
         </classes>
 
     </test>

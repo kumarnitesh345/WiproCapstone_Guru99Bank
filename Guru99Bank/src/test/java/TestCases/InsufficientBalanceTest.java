@@ -5,16 +5,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Base.BaseTest;
+import Pages.FundTransferPage;
 import Pages.LoginPage;
 import Pages.WithdrawalPage;
 import Utilities.ConfigReader;
 import Utilities.TestData;
-import Utilities.WaitUtils;
 
-public class WithdrawalTest extends BaseTest {
+public class InsufficientBalanceTest extends BaseTest {
 
 	@Test
-	public void withdrawalMoneyTest() {
+	public void insufficientBalanceTest() {
 
 	    ConfigReader config =
 	            new ConfigReader();
@@ -26,49 +26,46 @@ public class WithdrawalTest extends BaseTest {
 	            config.getUsername(),
 	            config.getPassword());
 
-	    WithdrawalPage withdrawal =
-	            new WithdrawalPage(driver);
-
-	    withdrawal.withdrawMoney(
-	            TestData.accountId1,
-	            "1000");
+	    FundTransferPage transfer =
+	            new FundTransferPage(driver);
 
 	    try {
+
+	        transfer.transferFunds(
+	                TestData.accountId1,
+	                TestData.accountId2,
+	                "100000");
 
 	        String pageText =
 	                driver.findElement(
 	                        By.tagName("body"))
 	                        .getText();
 
-	        if(pageText.contains(
-	                "Transaction details of Withdrawal")) {
-
-	            TestData.account1Balance =
-	                    TestData.account1Balance - 1000;
+	        if(pageText.contains("Fund Transfer Details")) {
 
 	            System.out.println(
-	                    "Withdrawal Amount = 1000");
+	                    "BUG FOUND : Transfer Allowed With Insufficient Balance");
 
 	            System.out.println(
-	                    "Current Account Balance = "
-	                            + TestData.account1Balance);
+	                    "Transfer Amount = 100000");
+
+	            System.out.println(
+	                    "Available Balance = "
+	                    + TestData.account1Balance);
 
 	        } else {
 
 	            System.out.println(
-	                    "BUG FOUND : Withdrawal Validation Failed");
+	                    "Insufficient Balance Validation Working");
 
 	            System.out.println(
-	                    "Expected Result : Withdrawal Successful");
-
-	            System.out.println(
-	                    "Actual Result : Confirmation page not displayed");
+	                    "Transfer Blocked Successfully");
 	        }
 
 	    } catch(Exception e) {
 
 	        System.out.println(
-	                "BUG FOUND : Withdrawal Page Issue");
+	                "Insufficient Balance Test Executed");
 
 	        System.out.println(
 	                e.getMessage());

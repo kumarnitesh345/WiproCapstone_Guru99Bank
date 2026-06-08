@@ -48,13 +48,34 @@ public class TestListener implements ITestListener {
         test.fail(
                 result.getThrowable());
 
-        ScreenshotUtil.captureScreenshot(
-                BaseTest.driver,
-                result.getName());
+        try {
+
+            if (BaseTest.driver != null) {
+
+                ScreenshotUtil.captureScreenshot(
+                        BaseTest.driver,
+                        result.getName());
+            }
+
+        } catch (Exception e) {
+
+            System.out.println(
+                    "Screenshot capture failed : "
+                            + e.getMessage());
+        }
 
         System.out.println(
                 "FAILED : "
                         + result.getName());
+
+        if (result.getThrowable() != null) {
+
+            System.out.println(
+                    "Exception Details:");
+
+            result.getThrowable()
+                  .printStackTrace();
+        }
     }
 
     @Override

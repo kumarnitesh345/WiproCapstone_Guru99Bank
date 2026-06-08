@@ -37,7 +37,7 @@ public class LoginTest extends BaseTest {
 
         login.login(username, password);
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         System.out.println("Current URL : "
                 + driver.getCurrentUrl());
@@ -115,8 +115,15 @@ public class LoginTest extends BaseTest {
                     wait.until(
                             ExpectedConditions.alertIsPresent());
 
+            String alertText =
+                    alert.getText();
+
+            System.out.println(
+                    "Alert Message : "
+                    + alertText);
+
             Assert.assertTrue(
-                    alert.getText().contains(
+                    alertText.contains(
                             "User or Password is not valid"));
 
             alert.accept();
@@ -125,6 +132,16 @@ public class LoginTest extends BaseTest {
 
             System.out.println(
                     "No alert displayed for empty login.");
+
+            // Validate user remains on login page
+
+            Assert.assertTrue(
+                    driver.getCurrentUrl()
+                          .contains("V4"),
+                    "User unexpectedly logged in with empty credentials");
+
+            System.out.println(
+                    "Empty Login Validation Successful");
         }
     }
 }

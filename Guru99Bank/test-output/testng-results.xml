@@ -1,119 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-08T09:29:52 IST" name="Guru99BankSuite" finished-at="2026-06-08T09:32:49 IST" duration-ms="177716">
+  <suite started-at="2026-06-08T14:49:36 IST" name="Guru99BankSuite" finished-at="2026-06-08T14:50:57 IST" duration-ms="81064">
     <groups>
     </groups>
-    <test started-at="2026-06-08T09:29:52 IST" name="Guru99 Tests" finished-at="2026-06-08T09:32:49 IST" duration-ms="177716">
+    <test started-at="2026-06-08T14:49:36 IST" name="Guru99 Tests" finished-at="2026-06-08T14:50:57 IST" duration-ms="81064">
       <class name="TestCases.DepositTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.DepositTest@7e0aadd0]" started-at="2026-06-08T09:31:35 IST" name="setup" finished-at="2026-06-08T09:31:49 IST" duration-ms="13848" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.DepositTest@4628b1d3]" started-at="2026-06-08T14:50:21 IST" name="setup" finished-at="2026-06-08T14:50:24 IST" duration-ms="2958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="depositMoneyTest()[pri:0, instance:TestCases.DepositTest@7e0aadd0]" started-at="2026-06-08T09:31:49 IST" name="depositMoneyTest" finished-at="2026-06-08T09:32:00 IST" duration-ms="11329" status="PASS">
+        <test-method signature="depositMoneyTest()[pri:0, instance:TestCases.DepositTest@4628b1d3]" started-at="2026-06-08T14:50:24 IST" name="depositMoneyTest" finished-at="2026-06-08T14:50:27 IST" duration-ms="3029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- depositMoneyTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.DepositTest@7e0aadd0]" started-at="2026-06-08T09:32:00 IST" name="tearDown" finished-at="2026-06-08T09:32:00 IST" duration-ms="162" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.DepositTest@4628b1d3]" started-at="2026-06-08T14:50:27 IST" name="tearDown" finished-at="2026-06-08T14:50:27 IST" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.DepositTest -->
       <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:29:52 IST" name="setup" finished-at="2026-06-08T09:30:04 IST" duration-ms="11901" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:36 IST" name="setup" finished-at="2026-06-08T14:49:41 IST" duration-ms="5002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="emptyLoginTest()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:04 IST" name="emptyLoginTest" finished-at="2026-06-08T09:30:09 IST" duration-ms="5367" status="PASS">
+        <test-method signature="emptyLoginTest()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:41 IST" name="emptyLoginTest" finished-at="2026-06-08T14:49:46 IST" duration-ms="5532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:09 IST" name="tearDown" finished-at="2026-06-08T09:30:09 IST" duration-ms="168" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:46 IST" name="tearDown" finished-at="2026-06-08T14:49:47 IST" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:09 IST" name="setup" finished-at="2026-06-08T09:30:16 IST" duration-ms="6514" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:47 IST" name="setup" finished-at="2026-06-08T14:49:49 IST" duration-ms="2731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidLoginTest()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:16 IST" name="invalidLoginTest" finished-at="2026-06-08T09:30:16 IST" duration-ms="565" status="PASS">
+        <test-method signature="invalidLoginTest()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:49 IST" name="invalidLoginTest" finished-at="2026-06-08T14:49:51 IST" duration-ms="1167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:16 IST" name="tearDown" finished-at="2026-06-08T09:30:16 IST" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:51 IST" name="tearDown" finished-at="2026-06-08T14:49:51 IST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:16 IST" name="setup" finished-at="2026-06-08T09:30:26 IST" duration-ms="9772" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:51 IST" name="setup" finished-at="2026-06-08T14:49:53 IST" duration-ms="2711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validLoginTest()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:26 IST" name="validLoginTest" finished-at="2026-06-08T09:30:36 IST" duration-ms="9807" status="PASS">
+        <test-method signature="validLoginTest()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:53 IST" name="validLoginTest" finished-at="2026-06-08T14:49:58 IST" duration-ms="4735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.LoginTest@532721fd]" started-at="2026-06-08T09:30:36 IST" name="tearDown" finished-at="2026-06-08T09:30:36 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.LoginTest@1cf2fed4]" started-at="2026-06-08T14:49:58 IST" name="tearDown" finished-at="2026-06-08T14:49:58 IST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.LoginTest -->
       <class name="TestCases.WithdrawalTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.WithdrawalTest@21362712]" started-at="2026-06-08T09:32:00 IST" name="setup" finished-at="2026-06-08T09:32:16 IST" duration-ms="15227" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.WithdrawalTest@77cf3f8b]" started-at="2026-06-08T14:50:27 IST" name="setup" finished-at="2026-06-08T14:50:33 IST" duration-ms="6183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="withdrawalMoneyTest()[pri:0, instance:TestCases.WithdrawalTest@21362712]" started-at="2026-06-08T09:32:16 IST" name="withdrawalMoneyTest" finished-at="2026-06-08T09:32:26 IST" duration-ms="10487" status="PASS">
+        <test-method signature="withdrawalMoneyTest()[pri:0, instance:TestCases.WithdrawalTest@77cf3f8b]" started-at="2026-06-08T14:50:33 IST" name="withdrawalMoneyTest" finished-at="2026-06-08T14:50:37 IST" duration-ms="3309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withdrawalMoneyTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.WithdrawalTest@21362712]" started-at="2026-06-08T09:32:26 IST" name="tearDown" finished-at="2026-06-08T09:32:26 IST" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.WithdrawalTest@77cf3f8b]" started-at="2026-06-08T14:50:37 IST" name="tearDown" finished-at="2026-06-08T14:50:37 IST" duration-ms="212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.WithdrawalTest -->
-      <class name="TestCases.FundTransferTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.FundTransferTest@27eb3298]" started-at="2026-06-08T09:32:26 IST" name="setup" finished-at="2026-06-08T09:32:40 IST" duration-ms="13621" status="PASS">
+      <class name="TestCases.InsufficientBalanceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.InsufficientBalanceTest@226f885f]" started-at="2026-06-08T14:50:51 IST" name="setup" finished-at="2026-06-08T14:50:54 IST" duration-ms="2802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="fundTransferTest()[pri:0, instance:TestCases.FundTransferTest@27eb3298]" started-at="2026-06-08T09:32:40 IST" name="fundTransferTest" finished-at="2026-06-08T09:32:49 IST" duration-ms="9442" status="PASS">
+        <test-method signature="insufficientBalanceTest()[pri:0, instance:TestCases.InsufficientBalanceTest@226f885f]" started-at="2026-06-08T14:50:54 IST" name="insufficientBalanceTest" finished-at="2026-06-08T14:50:57 IST" duration-ms="3056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insufficientBalanceTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.InsufficientBalanceTest@226f885f]" started-at="2026-06-08T14:50:57 IST" name="tearDown" finished-at="2026-06-08T14:50:57 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.InsufficientBalanceTest -->
+      <class name="TestCases.FundTransferTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.FundTransferTest@1df98368]" started-at="2026-06-08T14:50:37 IST" name="setup" finished-at="2026-06-08T14:50:40 IST" duration-ms="3000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="fundTransferTest()[pri:0, instance:TestCases.FundTransferTest@1df98368]" started-at="2026-06-08T14:50:40 IST" name="fundTransferTest" finished-at="2026-06-08T14:50:44 IST" duration-ms="3860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fundTransferTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.FundTransferTest@27eb3298]" started-at="2026-06-08T09:32:49 IST" name="tearDown" finished-at="2026-06-08T09:32:49 IST" duration-ms="152" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.FundTransferTest@1df98368]" started-at="2026-06-08T14:50:44 IST" name="tearDown" finished-at="2026-06-08T14:50:44 IST" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.FundTransferTest -->
       <class name="TestCases.AccountTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.AccountTest@1f130eaf]" started-at="2026-06-08T09:30:55 IST" name="setup" finished-at="2026-06-08T09:31:09 IST" duration-ms="14105" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.AccountTest@34abdee4]" started-at="2026-06-08T14:50:10 IST" name="setup" finished-at="2026-06-08T14:50:14 IST" duration-ms="3811" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createAccountTest()[pri:0, instance:TestCases.AccountTest@1f130eaf]" started-at="2026-06-08T09:31:09 IST" name="createAccountTest" finished-at="2026-06-08T09:31:35 IST" duration-ms="25590" status="PASS">
+        <test-method signature="createAccountTest()[pri:0, instance:TestCases.AccountTest@34abdee4]" started-at="2026-06-08T14:50:14 IST" name="createAccountTest" finished-at="2026-06-08T14:50:21 IST" duration-ms="7043" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccountTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AccountTest@1f130eaf]" started-at="2026-06-08T09:31:35 IST" name="tearDown" finished-at="2026-06-08T09:31:35 IST" duration-ms="139" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AccountTest@34abdee4]" started-at="2026-06-08T14:50:21 IST" name="tearDown" finished-at="2026-06-08T14:50:21 IST" duration-ms="226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.AccountTest -->
       <class name="TestCases.CustomerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.CustomerTest@4108fa66]" started-at="2026-06-08T09:30:36 IST" name="setup" finished-at="2026-06-08T09:30:48 IST" duration-ms="11893" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.CustomerTest@655a5d9c]" started-at="2026-06-08T14:49:58 IST" name="setup" finished-at="2026-06-08T14:50:03 IST" duration-ms="4614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createCustomerTest()[pri:0, instance:TestCases.CustomerTest@4108fa66]" started-at="2026-06-08T09:30:48 IST" name="createCustomerTest" finished-at="2026-06-08T09:30:55 IST" duration-ms="6975" status="PASS">
+        <test-method signature="createCustomerTest()[pri:0, instance:TestCases.CustomerTest@655a5d9c]" started-at="2026-06-08T14:50:03 IST" name="createCustomerTest" finished-at="2026-06-08T14:50:10 IST" duration-ms="6630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCustomerTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CustomerTest@4108fa66]" started-at="2026-06-08T09:30:55 IST" name="tearDown" finished-at="2026-06-08T09:30:55 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.CustomerTest@655a5d9c]" started-at="2026-06-08T14:50:10 IST" name="tearDown" finished-at="2026-06-08T14:50:10 IST" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.CustomerTest -->
+      <class name="TestCases.InvalidAccountTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.InvalidAccountTest@21ca139c]" started-at="2026-06-08T14:50:44 IST" name="setup" finished-at="2026-06-08T14:50:47 IST" duration-ms="2552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="invalidAccountDepositTest()[pri:0, instance:TestCases.InvalidAccountTest@21ca139c]" started-at="2026-06-08T14:50:47 IST" name="invalidAccountDepositTest" finished-at="2026-06-08T14:50:51 IST" duration-ms="4041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidAccountDepositTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.InvalidAccountTest@21ca139c]" started-at="2026-06-08T14:50:51 IST" name="tearDown" finished-at="2026-06-08T14:50:51 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.InvalidAccountTest -->
+      <class name="TestCases.AccountDetailsTest">
+        <test-method signature="verifyAccountDetails()[pri:0, instance:TestCases.AccountDetailsTest@71a9b4c7]" started-at="2026-06-08T14:50:21 IST" name="verifyAccountDetails" finished-at="2026-06-08T14:50:21 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountDetails -->
+      </class> <!-- TestCases.AccountDetailsTest -->
+      <class name="TestCases.CustomerValidationTest">
+        <test-method signature="validateCustomerId()[pri:0, instance:TestCases.CustomerValidationTest@1494b84d]" started-at="2026-06-08T14:50:10 IST" name="validateCustomerId" finished-at="2026-06-08T14:50:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCustomerId -->
+      </class> <!-- TestCases.CustomerValidationTest -->
     </test> <!-- Guru99 Tests -->
   </suite> <!-- Guru99BankSuite -->
 </testng-results>
