@@ -616,3 +616,19 @@
 2026-06-08 09:32:00,878 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
 2026-06-08 09:32:26,737 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
 2026-06-08 09:32:26,747 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:49:40,699 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:49:40,739 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:50:06,940 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:50:06,954 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:50:24,428 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:50:24,440 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:50:54,698 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:50:54,711 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:51:20,503 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:51:20,517 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:52:06,438 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:52:06,470 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:52:43,390 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:52:43,402 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
+2026-06-08 09:53:10,166 INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.54 (resolved driver for Chrome 149)
+2026-06-08 09:53:10,189 INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nk171\.cache\selenium\chromedriver\win64\149.0.7827.54\chromedriver.exe
