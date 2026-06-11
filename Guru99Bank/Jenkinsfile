@@ -10,20 +10,54 @@ tools {
 
 stages {
 
-    stage('Checkout') {
+    stage('Checkout Code') {
+
         steps {
+
             git branch: 'master',
                 url: 'https://github.com/kumarnitesh345/WiproCapstone_Guru99Bank.git'
         }
     }
 
-    stage('Build & Execute Tests') {
+    stage('Build Project') {
+
         steps {
 
             dir('Guru99Bank') {
 
-                bat 'mvn clean test'
+                bat 'mvn clean compile'
             }
+        }
+    }
+
+    stage('Build Docker Image') {
+
+        steps {
+
+            dir('Guru99Bank') {
+
+                bat 'docker build -t guru99-bank .'
+            }
+        }
+    }
+
+    stage('Run Tests in Docker') {
+
+        steps {
+
+            dir('Guru99Bank') {
+
+                bat 'docker run --rm guru99-bank'
+            }
+        }
+    }
+
+    stage('Publish Test Results') {
+
+        steps {
+
+            junit allowEmptyResults: true,
+                  testResults: 'Guru99Bank/target/surefire-reports/*.xml'
         }
     }
 }
@@ -32,27 +66,32 @@ post {
 
     always {
 
-        junit allowEmptyResults: true,
-              testResults: 'Guru99Bank/target/surefire-reports/*.xml'
+        archiveArtifacts(
+            artifacts: 'Guru99Bank/screenshots/*.png',
+            allowEmptyArchive: true
+        )
 
-        archiveArtifacts artifacts: 'Guru99Bank/screenshots/*.png',
-                         allowEmptyArchive: true
+        archiveArtifacts(
+            artifacts: 'Guru99Bank/logs/*.log',
+            allowEmptyArchive: true
+        )
 
-        archiveArtifacts artifacts: 'Guru99Bank/logs/*.log',
-                         allowEmptyArchive: true
-
-        archiveArtifacts artifacts: 'Guru99Bank/ExtentReports/*.html',
-                         allowEmptyArchive: true
+        archiveArtifacts(
+            artifacts: 'Guru99Bank/ExtentReports/*.html',
+            allowEmptyArchive: true
+        )
 
         echo 'Execution Completed'
     }
 
     success {
-        echo 'Build Successful'
+
+        echo 'Guru99 Bank Automation + Docker Execution Successful'
     }
 
     failure {
-        echo 'Build Failed'
+
+        echo 'Guru99 Bank Automation + Docker Execution Failed'
     }
 }
 
